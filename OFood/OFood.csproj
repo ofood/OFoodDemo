@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Caching\CacheExtensions.cs" />
+    <Compile Remove="Logging\EmptyLogger.cs" />
+    <Compile Remove="Logging\EmptyLoggerFactory.cs" />
+    <Compile Remove="Logging\ILogger.cs" />
+    <Compile Remove="Logging\ILoggerAdapter.cs" />
+    <Compile Remove="Logging\ILoggerFactory.cs" />
+    <Compile Remove="Logging\InternalLogger.cs" />
+    <Compile Remove="Logging\LogBase.cs" />
+    <Compile Remove="Logging\LoggerAdapterBase.cs" />
+    <Compile Remove="Logging\LogLevel.cs" />
+    <Compile Remove="Logging\LogManager.cs" />
+    <Compile Remove="Net\DefaultEmailSender.cs" />
+    <Compile Remove="Reflection\TypeExtensions.cs" />
+    <Compile Remove="Security\CommunicationCryptor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EventBuses\" />
+    <Folder Include="Threading\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2018.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    <PackageReference Include="System.Runtime.Caching" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
